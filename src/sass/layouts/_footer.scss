@@ -1,0 +1,30 @@
+footer{
+    a{
+        display: inline-block;
+        vertical-align: middle;
+    }
+    &__img-amazon{
+        height:40px;
+        width:138px;
+    }
+    &__img-etsy{
+        height:44px;
+        width:90px;
+    }
+    &__img-bank{
+        height:30px;
+        width:154px;
+    }
+    &__img-sys{
+        height:50px;
+        width:60px;
+    }
+    &__img-youtube{
+        height:30px;
+        width:140px;
+    }
+    &__img-kick{
+        height:28px;
+        width:228px;
+    }
+}

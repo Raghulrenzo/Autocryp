@@ -1,0 +1,8 @@
+@mixin btn {
+        font-size:16px;
+        font-weight:700;
+        line-height:2;
+        color:$primary-white;
+        background-color:$primary-green;
+        border-radius: 6px 0 0 6px;
+    }

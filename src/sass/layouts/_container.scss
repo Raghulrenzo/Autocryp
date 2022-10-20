@@ -1,0 +1,17 @@
+.container{
+    max-width:1200px;
+    padding:0 10px;
+    margin: auto;
+}
+.container-edge{
+    max-width:1280px;
+    padding: 0 10px;
+    margin-left: auto;
+    background: linear-gradient(
+    to right,
+    $primary-white 0%,
+    $primary-white 40%,
+    $primary-grey 40%,
+    $primary-grey 100%
+  );
+}

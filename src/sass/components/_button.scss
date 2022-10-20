@@ -1,0 +1,14 @@
+.btn-primary,.btn-secondary{
+        font-size:$fs-sm;
+        font-weight:700;
+        line-height:2;
+        color:$primary-white;
+        background-color:$primary-green;
+        border-radius: 6px 0 6px 0;
+}
+.btn-primary{
+    padding:4px 26px;
+}
+.btn-secondary{
+    padding:16px 46px;
+}

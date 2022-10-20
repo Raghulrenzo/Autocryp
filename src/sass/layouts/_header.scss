@@ -1,0 +1,50 @@
+header{
+    padding:24px 0 0 0;
+    background-color:$primary-blue;
+}
+.logo{
+    font-size: 26px;
+    font-weight: 500;
+    line-height: 2.23;
+    color:$primary-white;
+}
+.nav__bar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    a{
+        display: inline-block;
+    }
+}
+.nav__items{
+    display: inline-block;
+    font-size:0;
+    li{
+        display: inline-block;
+    }
+    &--menu{
+            display: inline-block;
+            position: relative;
+            padding:4px 0; 
+            &:before{
+                content:'';
+                position:absolute;
+                transition: .5s ease;
+                left: 0;
+                bottom: 0;
+                width: 0;
+                height: 2px;
+                background:$primary-green;
+            }
+            &:hover:before{
+               width:100%;
+                 
+            }
+            &:hover{
+                cursor:pointer ;
+            
+            }
+        }
+    
+
+}

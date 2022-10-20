@@ -1,0 +1,13 @@
+.link-primary,.link-secondary{
+    font-size:$fs-sm;
+    font-weight:normal;
+}
+.link-primary{
+    color:$primary-white;
+}
+.link-secondary{
+    color:$tertiary-blue;
+}
+.link-tertiary{
+    color:$primary-grey;
+}
