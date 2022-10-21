@@ -295,6 +295,10 @@ table {
   color: #031d5b;
 }
 
+.primary-white {
+  color: #ffffff;
+}
+
 .circle {
   width: 20px;
   height: 20px;
@@ -324,28 +328,24 @@ table {
   font-size: 48px;
   font-weight: 700;
   line-height: normal;
-  color: #ffffff;
 }
 
 .title-xxl {
   font-size: 40px;
   font-weight: 500;
   line-height: 1.6;
-  color: #32325c;
 }
 
 .title-xl {
   font-size: 24px;
   font-weight: 700;
   line-height: 1.33;
-  color: #32325c;
 }
 
 .title-l {
   font-size: 18px;
   font-weight: 500;
   line-height: normal;
-  color: #031d5b;
 }
 
 .title {
@@ -358,7 +358,6 @@ table {
   font-size: 16px;
   font-weight: normal;
   line-height: 32px;
-  color: #ffffff;
 }
 
 .link-primary, .link-secondary {
@@ -421,6 +420,7 @@ body {
   font-family: "rubik";
   font-size: 16px;
   line-height: 1;
+  color: #5b6c94;
 }
 
 a {
@@ -478,7 +478,7 @@ img {
   margin: 0 auto;
   padding: 56px 80px;
   position: relative;
-  top: -100px;
+  margin-top: -90px;
   z-index: 1;
   font-size: 0;
   background-color: #ffffff;
@@ -602,7 +602,7 @@ img {
 }
 
 header {
-  padding: 24px 0;
+  padding: 14px 0;
   background-color: #313a5a;
   position: sticky;
   top: 0;

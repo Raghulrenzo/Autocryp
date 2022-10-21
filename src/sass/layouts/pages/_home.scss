@@ -2,6 +2,7 @@ body{
     font-family:'rubik';
     font-size:16px;
     line-height:1;
+    color:$tertiary-blue;
 }
 a{
     text-decoration: none;
@@ -51,7 +52,7 @@ img{
         margin:0 auto;
         padding:56px 80px;
         position:relative;
-        top:-100px;
+        margin-top: -90px;
         z-index: 1;
         font-size:0;
         background-color: $primary-white;
@@ -171,4 +172,5 @@ img{
         }
     } 
     }
-}    
+}
+    
