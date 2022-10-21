@@ -1,14 +1,38 @@
-.btn-primary,.btn-secondary{
+%btn{
         font-size:$fs-sm;
         font-weight:700;
         line-height:2;
         color:$primary-white;
         background-color:$primary-green;
         border-radius: 6px 0 6px 0;
+        box-shadow: 0 8px 34px 0 $primary-green;
+        position:relative;
+        z-index: 1;
 }
+        
 .btn-primary{
+    @extend %btn;
     padding:4px 26px;
 }
 .btn-secondary{
+    @extend %btn;
     padding:16px 46px;
+}
+.btn-primary::before,
+.btn-secondary::before {
+  content: "";
+  background-color: $primary-blue;
+  width:100%;
+  height: 0%;
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  transition: 0.7s;
+  border-radius: 6px 0 6px 0;
+}
+
+.btn-primary:hover::before,
+.btn-secondary:hover::before {
+  height: 100%;
 }

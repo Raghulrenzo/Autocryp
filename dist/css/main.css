@@ -378,13 +378,16 @@ table {
   color: #313a5a;
 }
 
-.btn-primary, .btn-secondary {
+.btn-secondary, .btn-primary {
   font-size: 16px;
   font-weight: 700;
   line-height: 2;
   color: #ffffff;
   background-color: #1fdb84;
   border-radius: 6px 0 6px 0;
+  box-shadow: 0 8px 34px 0 #1fdb84;
+  position: relative;
+  z-index: 1;
 }
 
 .btn-primary {
@@ -393,6 +396,25 @@ table {
 
 .btn-secondary {
   padding: 16px 46px;
+}
+
+.btn-primary::before,
+.btn-secondary::before {
+  content: "";
+  background-color: #031d5b;
+  width: 100%;
+  height: 0%;
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  transition: 0.7s;
+  border-radius: 6px 0 6px 0;
+}
+
+.btn-primary:hover::before,
+.btn-secondary:hover::before {
+  height: 100%;
 }
 
 body {
@@ -421,8 +443,8 @@ img {
   position: relative;
   background-image: url("https://i.ibb.co/5sq4Nhg/artboard.png");
   background-repeat: no-repeat;
-  background-size: 340px 540px;
-  background-position: bottom 0 right 20%;
+  background-size: 416px;
+  background-position: bottom 0 right 190px;
 }
 .hero__card {
   width: 38%;
@@ -580,8 +602,11 @@ img {
 }
 
 header {
-  padding: 24px 0 0 0;
-  background-color: #031d5b;
+  padding: 24px 0;
+  background-color: #313a5a;
+  position: sticky;
+  top: 0;
+  z-index: 2;
 }
 
 .logo {
@@ -612,21 +637,19 @@ header {
   position: relative;
   padding: 4px 0;
 }
-.nav__items--menu:before {
+.nav__items--menu::before {
   content: "";
   position: absolute;
   transition: 0.5s ease;
   left: 0;
   bottom: 0;
-  width: 0;
+  width: 100%;
   height: 2px;
   background: #1fdb84;
+  transform: scaleX(0);
 }
-.nav__items--menu:hover:before {
-  width: 100%;
-}
-.nav__items--menu:hover {
-  cursor: pointer;
+.nav__items--menu:hover::before {
+  transform: scaleX(1);
 }
 
 footer a {
