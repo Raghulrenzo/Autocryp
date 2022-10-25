@@ -1,38 +1,43 @@
-/*margin-top*/
-@each $size in $spacing{
-    .mt-#{$size}{
+@each $num,$size in $spacing{
+    .mt-#{$num}{
         margin-top:$size;
     }
-    
 }
 /*margin-bottom*/
-@each $size in $spacing{
-    .mb-#{$size}{
+@each $num,$size in $spacing{
+    .mb-#{$num}{
         margin-bottom:$size;
     }
 }
-.mb-sm{
-    margin-bottom:$spacing-sm;
+@include media-breakpoint(md){
+    .mb-8{
+        margin-bottom: $spacing-4;
+    }
 }
-.mb-md{
-    margin-bottom: $spacing-md;
+@include media-breakpoint(sm){
+    .mb-8{
+        margin-bottom: $spacing-3;
+    }
 }
 /*margin-right*/
-@each $size in $spacing{
-    .mr-#{$size}{
+@each $num,$size in $spacing{
+    .mr-#{$num}{
         margin-right:$size;
     }
 }
-.mr-md{
-    margin-right:$spacing-md;
-}
 
-/*margin-left*/
-@each $size in $spacing{
-    .ml-#{$size}{
-        margin-left:$size;
+.mr-8{
+    margin-right:$spacing-8;
+    @include media-breakpoint(lg){
+        margin-right:$spacing-5;
     }
 }
+/*margin-left*/
+@each $num,$size in $spacing{
+    .ml-#{$num}{
+        margin-left:$size;
+    }
+} 
 /*padding*/
 .pr-16px{
     padding-right: 16px;
@@ -112,6 +117,12 @@
 }
 .primary-white{
     color:$primary-white;
+}
+.secondary-blue{
+    color:$secondary-blue;
+}
+.tertiary-blue{
+    color:$tertiary-blue;
 }
 .circle{
     width:20px;

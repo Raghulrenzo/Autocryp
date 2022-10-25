@@ -17,6 +17,9 @@
 .btn-secondary{
     @extend %btn;
     padding:16px 46px;
+    @include media-breakpoint(lg){
+      padding:16px 26px;
+    }
 }
 .btn-primary::before,
 .btn-secondary::before {

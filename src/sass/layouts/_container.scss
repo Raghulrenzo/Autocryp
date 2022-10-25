@@ -2,7 +2,36 @@
     max-width:1200px;
     padding:0 10px;
     margin: auto;
+    @include media-breakpoint(xl){
+      max-width: 1000px;
+    }
+    @include media-breakpoint(lg){
+      padding: 0 30px;
+    }
 }
+.feature__container{
+      max-width: 1250px;
+      margin:0 auto;
+      padding:56px 80px;
+      position:relative;
+      margin-top: -90px;
+      z-index: 1;
+      font-size:0;
+      background-color: $primary-white;
+      border-radius:6px;
+      @include media-breakpoint(xl){
+        max-width:980px;
+        padding: 46px 60px;
+      }
+      @include media-breakpoint(lg){
+        max-width:90%;
+        padding: 36px 46px;
+      }
+      @include media-breakpoint(sm){
+        padding: 56px 40px;
+      }
+  }
+
 .container-edge{
     max-width:1280px;
     padding: 0 10px;

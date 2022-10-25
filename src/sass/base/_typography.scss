@@ -21,11 +21,17 @@
     font-size:$fs-xxl;
     font-weight: 700;
     line-height:normal;
+    @include media-breakpoint(lg){
+        font-size:$fs-xl;
+    }
 }
 .title-xxl{
     font-size: $fs-xl;
     font-weight:500;
     line-height:1.6;
+    @include media-breakpoint(md){
+        font-size: 28px;
+    }
 }
 .title-xl{
     font-size:$fs-l;

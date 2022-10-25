@@ -21,13 +21,42 @@ img{
     position: relative;
     background-image: url("https://i.ibb.co/5sq4Nhg/artboard.png");
     background-repeat: no-repeat;
-    background-size:416px;
+    background-size:380px;
     background-position: bottom 0 right 190px;
+    @include media-breakpoint(xl){
+        background-size: 370px;
+        background-position: bottom 0 right 150px;
+    }
+    @include media-breakpoint(lg){
+        background-size:360px;
+        background-position: bottom 0 right 80px;
+    }
+    @include media-breakpoint(md){
+        background-size:320px;
+        background-position: bottom 0 right 30px;
+    }
+    @include media-breakpoint(sm){
+        background-image: none;
+    }
     &__card{
         width:38%;
         position:absolute;
         top:50%;
         transform: translateY(-60%);
+        @include media-breakpoint(lg){
+            width:46%;
+        }
+        @include media-breakpoint(md){
+            width:55%;
+        }
+        @include media-breakpoint(sm){
+            width: 90%;
+        }
+        &--title{
+            @include media-breakpoint(lg){
+            margin-right:0;
+            }
+        }
     }
 }
 /*feature*/
@@ -47,21 +76,41 @@ img{
     width:40px;
 }
 .feature{
-    &__container{
-        max-width: 1250px;
-        margin:0 auto;
-        padding:56px 80px;
-        position:relative;
-        margin-top: -90px;
-        z-index: 1;
-        font-size:0;
-        background-color: $primary-white;
-        border-radius:6px;
-    }
     &__card{
         width:calc((100% - 200px )/3);
         display:inline-block;
         vertical-align: top;
+        
+        @include media-breakpoint(xl){
+            width:calc((100% - 84px )/3);
+            margin-right: $spacing-5;
+        }
+        @include media-breakpoint(xl){
+            &:last-child{
+                margin-right: 0;
+            }
+        }
+        @include media-breakpoint(lg){
+            width:calc((100% - 26px )/2);
+            margin-bottom: $spacing-3;
+        }
+        @include media-breakpoint(lg){
+            &:nth-child(even){
+                margin-right: 0;
+            }
+            &:nth-child(odd){
+                margin-right: $spacing-3;
+            }
+            
+        }
+        @include media-breakpoint(sm){
+            display: block;
+            width: 100%;
+            &:nth-child(odd){
+                margin-right: 2px;
+            }
+        }
+       
         &--title{
             padding-bottom: 28px;
             position:relative;
@@ -82,9 +131,20 @@ img{
 }
 /*plans-section*/
 .plans{
+    button:hover{
+        color:$primary-blue;
+        cursor: pointer;
+        
+    }
     &__title{
         display: inline-block;
         width:66%;
+        @include media-breakpoint(lg){
+            width:80%;
+        }
+        @include media-breakpoint(sm){
+            width:100%;
+        }
     }
     &__clip{
         font-size: 0;
@@ -96,6 +156,9 @@ img{
             border:1px $tertiary-green solid;
             border-radius:4px 0 0 4px;
             font-weight:700;
+            @include media-breakpoint(sm){
+                padding:10px 16px 10px 16px;
+            }
         }
         &--end{
             padding:20px 30px 20px 44px;
@@ -104,6 +167,9 @@ img{
             border:1px $tertiary-green solid;
             border-radius:0 4px 4px 0;
             font-weight:700;
+            @include media-breakpoint(sm){
+                padding: 10px 16px 10px 16px;
+            }
 
         }
     }
@@ -113,6 +179,9 @@ img{
             padding: 56px 62px;
             display: inline-block;
             vertical-align: top;
+            @include media-breakpoint(xl){
+                padding: 36px 42px;
+            }
             &:nth-of-type(2){
                 border-top: 2px $border-blue solid;
             }
@@ -173,4 +242,3 @@ img{
     } 
     }
 }
-    
