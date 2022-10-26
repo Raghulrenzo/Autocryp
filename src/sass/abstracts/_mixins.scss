@@ -25,4 +25,8 @@
             @content
         };
     }
+
+}
+@mixin circle{
+    width:20px;
 }
